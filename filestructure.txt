@@ -1,0 +1,34 @@
+v1_radar_qb/
+├─ fxmanifest.lua
+├─ config.lua
+├─ shared/
+│  └─ utils.lua
+├─ client/
+│  ├─ detector.lua
+│  ├─ inventory.lua
+│  └─ prop.lua
+├─ server/
+│  └─ main.lua
+└─ html/
+   ├─ index.html
+   ├─ style.css
+   └─ script.js
+
+['valentine_one'] = {
+    name = 'valentine_one',
+    label = 'Valentine One',
+    weight = 1500,
+    type = 'item',
+    image = 'valentine_one.png', -- put an image in qb-inventory/html/images/
+    unique = true,
+    useable = true,
+    shouldClose = true,
+    description = 'Radar/Laser detector for your vehicle.'
+},
+
+You don’t need to touch wk_wars2x for the polling fallback.
+If you want instant updates from wk_wars2x, add this one liner at the point it confirms a transmission and direction:
+
+-- inside wk_wars2x client detection (optional)
+TriggerEvent('wk:radarDetection', { band = "Ka", direction = "front", strength = 0.85 })
+

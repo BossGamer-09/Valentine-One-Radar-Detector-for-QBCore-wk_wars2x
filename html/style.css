@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  background: transparent;
+  font-family: monospace;
+}
+
+.hidden { display: none; }
+
+#v1 {
+  position: absolute;
+  bottom: 10%;
+  right: 3%;
+  background: rgba(0,0,0,0.85);
+  padding: 12px;
+  border-radius: 10px;
+  width: 180px;
+  text-align: center;
+  color: #f00;
+  border: 2px solid #700;
+  box-shadow: 0 0 12px rgba(255,0,0,0.25);
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.arrow { opacity: 0.25; }
+.arrow.active { opacity: 1; color: #f00; }
+
+#bands {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.band {
+  font-weight: bold;
+  opacity: 0.25;
+}
+.band.active { opacity: 1; color: orange; }
+
+.leds {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  margin: 6px 0;
+}
+
+.led {
+  width: 14px;
+  height: 12px;
+  background: #300;
+  border-radius: 2px;
+  opacity: 0.2;
+}
+.led.on.low    { background: #0f0; opacity: 1; }
+.led.on.medium { background: #ff0; opacity: 1; }
+.led.on.high   { background: #f00; opacity: 1; }
+
+.alert {
+  font-weight: bold;
+  color: #f00;
+  display: none;
+  animation: flash 0.5s infinite alternate;
+}
+
+@keyframes flash {
+  from { opacity: 1; }
+  to   { opacity: 0.2; }
+}
