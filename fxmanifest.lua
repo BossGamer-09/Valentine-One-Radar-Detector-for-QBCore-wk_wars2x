@@ -2,8 +2,8 @@ fx_version 'cerulean'
 game 'gta5'
 lua54 'yes'
 
-name 'v1_radar_qb'
-author 'you + gpt'
+name 'valentine_one_detector'
+author 'SASRP Development'
 description 'Valentine One radar detector (QBCore) integrated with Sonoran wk_wars2x'
 version '1.2.0'
 
@@ -13,6 +13,11 @@ files {
   'html/index.html',
   'html/style.css',
   'html/script.js'
+}
+
+escrow_ignore {
+  'config.lua',
+
 }
 
 shared_scripts {
