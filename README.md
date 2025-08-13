@@ -38,10 +38,6 @@ v1_radar_qb/
 ├── style.css # NUI styling
 └── script.js # NUI logic & sound handling
 
-yaml
-Copy
-Edit
-
 ---
 
 ## Installation
